@@ -25,7 +25,7 @@
 #' @export
 NestedMenu <- function(
   label, items, trigger = "left", style = "primary", size = NULL,
-  elementId = NULL
+  elementId = NULL,multiple = TRUE
 ) {
 
   # forward options using x
@@ -33,6 +33,7 @@ NestedMenu <- function(
     label   = label,
     trigger = match.arg(trigger, c("left", "right", "hover")),
     items   = items,
+    multiple = c("TRUE","FALSE")
     style   = match.arg(style,
       c("primary", "info", "success", "warning", "danger")
     ),
